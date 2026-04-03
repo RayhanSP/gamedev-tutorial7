@@ -1,5 +1,5 @@
 class_name Interactable
-extends Node
+extends StaticBody3D
 
 func interact():
 	pass
