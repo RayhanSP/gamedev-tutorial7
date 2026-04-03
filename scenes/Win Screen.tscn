@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cdgiai3gc3fpp"]
+
+[ext_resource type="Script" uid="uid://iv33t6xu4rq4" path="res://win_screen.gd" id="1_imebk"]
+[ext_resource type="Texture2D" uid="uid://cxkmwk6kovf3" path="res://assets/Keanu.png" id="2_xcy6l"]
+
+[node name="Win Screen" type="Control" unique_id=558855255]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_imebk")
+
+[node name="Label" type="Label" parent="." unique_id=1271037806]
+layout_mode = 0
+offset_left = 188.67
+offset_top = 466.0
+offset_right = 926.67
+offset_bottom = 558.0
+theme_override_font_sizes/font_size = 40
+text = "Semua gelas kopi terkumpul. Selamat!"
+
+[node name="Button" type="Button" parent="." unique_id=1205548502]
+layout_mode = 0
+offset_left = 491.0
+offset_top = 538.00006
+offset_right = 547.0
+offset_bottom = 569.00006
+scale = Vector2(2.305, 2.305)
+text = "RETRY"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1563026528]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 13.0
+offset_right = 1001.0
+offset_bottom = 473.0
+texture = ExtResource("2_xcy6l")
+expand_mode = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

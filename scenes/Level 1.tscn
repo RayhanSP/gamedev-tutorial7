@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://3bj4q2hq3e2l"]
+
+[ext_resource type="PackedScene" uid="uid://bjvvc4yryfqdq" path="res://scenes/Player.tscn" id="1_ymo8b"]
+[ext_resource type="PackedScene" uid="uid://dltqory4o1xju" path="res://scenes/World 1.tscn" id="2_gpsl1"]
+[ext_resource type="PackedScene" uid="uid://30latlwbnave" path="res://scenes/Area Trigger.tscn" id="3_gpsl1"]
+[ext_resource type="PackedScene" uid="uid://b2vn3ovap4n5d" path="res://scenes/Obj CoffeeCup.tscn" id="4_kbmnf"]
+
+[node name="Level 1" type="Node3D" unique_id=821593112]
+
+[node name="Player" parent="." unique_id=143064185 instance=ExtResource("1_ymo8b")]
+transform = Transform3D(0.325, 0, 0, 0, 0.325, 0, 0, 0, 0.325, -0.3, -0.055, 3.675)
+
+[node name="World 1" parent="." unique_id=523707518 instance=ExtResource("2_gpsl1")]
+
+[node name="CoffeeCup" parent="." unique_id=1107377267 instance=ExtResource("4_kbmnf")]
+transform = Transform3D(0.44, 0, 0, 0, 0.44, 0, 0, 0, 0.44, 1.4927444, -0.5139616, 0.94557714)
+
+[node name="CoffeeCup2" parent="." unique_id=1667508374 instance=ExtResource("4_kbmnf")]
+transform = Transform3D(0.44, 0, 0, 0, 0.44, 0, 0, 0, 0.44, -0.35321915, -0.5139616, 0.88750684)
+
+[node name="CoffeeCup3" parent="." unique_id=1273058893 instance=ExtResource("4_kbmnf")]
+transform = Transform3D(0.44, 0, 0, 0, 0.44, 0, 0, 0, 0.44, -1.9419271, -0.5139616, -0.4814371)
+
+[node name="CoffeeCup4" parent="." unique_id=714103181 instance=ExtResource("4_kbmnf")]
+transform = Transform3D(0.44, 0, 0, 0, 0.44, 0, 0, 0, 0.44, 0.0017830133, -0.5139616, -4.032608)
+
+[node name="Area Trigger Jurang" parent="." unique_id=856846598 instance=ExtResource("3_gpsl1")]
+transform = Transform3D(2.21, 0, 0, 0, 2.21, 0, 0, 0, 2.21, 0, -4.982538, 0)
+
+[node name="Area Trigger Win" parent="." unique_id=204157793 instance=ExtResource("3_gpsl1")]
+transform = Transform3D(0.77, 0, 0, 0, 0.77, 0, 0, 0, 0.77, 0, -0.4, -4.93)
+sceneName = "Win Screen"
+required_items = 4

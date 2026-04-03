@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://b2vn3ovap4n5d"]
+
+[ext_resource type="Script" uid="uid://6syu1jxw7l64" path="res://scenes/obj_coffee_cup.gd" id="1_yti2h"]
+[ext_resource type="Texture2D" uid="uid://caa5scdu376pg" path="res://assets/coffee_bean.png" id="2_fciub"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jn2ei"]
+albedo_color = Color(0.94252837, 0.7845876, 0.6623772, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_yti2h"]
+material = SubResource("StandardMaterial3D_jn2ei")
+top_radius = 0.2
+bottom_radius = 0.15
+height = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fciub"]
+albedo_color = Color(0.61, 0.4017867, 0.2196, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_k2p2f"]
+material = SubResource("StandardMaterial3D_fciub")
+top_radius = 0.2
+bottom_radius = 0.17
+height = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1nuj1"]
+albedo_color = Color(0.09, 0.09, 0.09, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_fciub"]
+radius = 0.35
+
+[node name="CoffeeCup" type="Area3D" unique_id=1107377267]
+script = ExtResource("1_yti2h")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="." unique_id=2114215635]
+mesh = SubResource("CylinderMesh_yti2h")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="." unique_id=397513641]
+mesh = SubResource("CylinderMesh_k2p2f")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=1234185520]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26423454, 0)
+radius = 0.23
+height = 0.023
+sides = 12
+material = SubResource("StandardMaterial3D_1nuj1")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="." unique_id=1361876954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2908411, 0)
+radius = 0.184
+height = 0.043
+sides = 12
+material = SubResource("StandardMaterial3D_1nuj1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=303472357]
+shape = SubResource("SphereShape3D_fciub")
+
+[node name="Decal" type="Decal" parent="." unique_id=1383602750]
+transform = Transform3D(1, 0, 0, 0, 0.010192532, 0.9999481, 0, -0.9999481, 0.010192532, 0, 0.0033897832, 0.1767191)
+size = Vector3(0.2, 0.2, 0.2)
+texture_albedo = ExtResource("2_fciub")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

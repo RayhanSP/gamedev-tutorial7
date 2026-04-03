@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://byunmftfmkgno"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sxpne"]
+albedo_color = Color(0.4392157, 0.2784314, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i0bjg"]
+albedo_color = Color(0.44, 0.27866668, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8nv1n"]
+albedo_color = Color(3.1164875, 2.2676926, 0, 1)
+
+[node name="Obj Lamp" type="Node3D" unique_id=1904058708]
+
+[node name="lamp" type="CSGCombiner3D" parent="." unique_id=1457709152]
+cast_shadow = 0
+use_collision = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="lamp" unique_id=673849993]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.235, 0)
+cast_shadow = 0
+height = 0.243
+sides = 12
+cone = true
+material = SubResource("StandardMaterial3D_sxpne")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="lamp" unique_id=1662195749]
+cast_shadow = 0
+radius = 0.042
+height = 2.406
+sides = 12
+material = SubResource("StandardMaterial3D_i0bjg")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="lamp" unique_id=649644069]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.34, 0)
+cast_shadow = 0
+polygon = PackedVector2Array(-0.042039275, 0.3883663, -0.0012313128, 0.8716048, 0.33842695, 0.8460403, 0.82002676, 0.27831796)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 12
+material = SubResource("StandardMaterial3D_8nv1n")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=265426276]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, 0)
+light_color = Color(1, 0.9216667, 0.53, 1)
+light_energy = 5.091
+shadow_enabled = true

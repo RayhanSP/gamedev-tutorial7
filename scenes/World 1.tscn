@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://dltqory4o1xju"]
+
+[ext_resource type="PackedScene" uid="uid://byunmftfmkgno" path="res://scenes/Obj Lamp.tscn" id="1_cb4d4"]
+
+[sub_resource type="Environment" id="Environment_cb4d4"]
+ambient_light_source = 2
+ambient_light_color = Color(0.44, 0.3872, 0.04400001, 1)
+
+[node name="World 1" type="Node3D" unique_id=523707518]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1571365007]
+environment = SubResource("Environment_cb4d4")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1820927283]
+use_collision = true
+
+[node name="Room 1" type="CSGBox3D" parent="CSGCombiner3D" unique_id=804684389]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00079643726, 0.0023348331, -0.00031530857)
+use_collision = true
+flip_faces = true
+size = Vector3(6.41, 1.775, 9.895)
+
+[node name="Obj Lamp" parent="CSGCombiner3D/Room 1" unique_id=1904058708 instance=ExtResource("1_cb4d4")]
+transform = Transform3D(0.295, 0, 0, 0, 0.295, 0, 0, 0, 0.295, 2.905, -0.485, -4.67)
+
+[node name="Obj Lamp2" parent="CSGCombiner3D/Room 1" unique_id=47609143 instance=ExtResource("1_cb4d4")]
+transform = Transform3D(0.295, 0, 0, 0, 0.295, 0, 0, 0, 0.295, -2.92, -0.485, -4.67)
+
+[node name="Obj Lamp3" parent="CSGCombiner3D/Room 1" unique_id=1975475579 instance=ExtResource("1_cb4d4")]
+transform = Transform3D(0.295, 0, 0, 0, 0.295, 0, 0, 0, 0.295, -2.92, -0.485, 4.66)
+
+[node name="Obj Lamp4" parent="CSGCombiner3D/Room 1" unique_id=2024793681 instance=ExtResource("1_cb4d4")]
+transform = Transform3D(0.295, 0, 0, 0, 0.295, 0, 0, 0, 0.295, 2.91, -0.485, 4.66)
+
+[node name="Jurang" type="CSGBox3D" parent="CSGCombiner3D" unique_id=696388342]
+transform = Transform3D(6.41, 0, 0, 0, 5.245, 0, 0, 0, 4.04, 0, -3.4706192, 0)
+
+[node name="Pijakan2" type="CSGBox3D" parent="." unique_id=789997387]
+transform = Transform3D(0.499, 0, 0, 0, 1.57, 0, 0, 0, 0.499, 2.2, -15.466, 1.49)
+use_collision = true
+size = Vector3(1, 18.65, 1)
+
+[node name="Pijakan3" type="CSGBox3D" parent="." unique_id=2051608447]
+transform = Transform3D(0.499, 0, 0, 0, 1.57, 0, 0, 0, 0.499, 1.49, -15.466, 0.965)
+use_collision = true
+size = Vector3(1, 18.65, 1)
+
+[node name="Pijakan4" type="CSGBox3D" parent="." unique_id=1323704529]
+transform = Transform3D(0.499, 0, 0, 0, 1.57, 0, 0, 0, 0.499, 0.495, -15.466, 1.16)
+use_collision = true
+size = Vector3(1, 18.65, 1)
+
+[node name="Pijakan5" type="CSGBox3D" parent="." unique_id=435896278]
+transform = Transform3D(0.499, 0, 0, 0, 1.57, 0, 0, 0, 0.499, -0.345, -15.466, 0.875)
+use_collision = true
+size = Vector3(1, 18.65, 1)
+
+[node name="Pijakan6" type="CSGBox3D" parent="." unique_id=1275761512]
+transform = Transform3D(0.499, 0, 0, 0, 1.57, 0, 0, 0, 0.499, -1.085, -15.466, 0.145)
+use_collision = true
+size = Vector3(1, 18.65, 1)
+
+[node name="Pijakan7" type="CSGBox3D" parent="." unique_id=1484814398]
+transform = Transform3D(0.499, 0, 0, 0, 1.57, 0, 0, 0, 0.499, -1.925, -15.466, -0.495)
+use_collision = true
+size = Vector3(1, 18.65, 1)
+
+[node name="Pijakan8" type="CSGBox3D" parent="." unique_id=1153318827]
+transform = Transform3D(0.499, 0, 0, 0, 1.57, 0, 0, 0, 0.499, -2.355, -15.466, -1.375)
+use_collision = true
+size = Vector3(1, 18.65, 1)
